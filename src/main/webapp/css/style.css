@@ -1,0 +1,32 @@
+.img-8-team{
+    width: 600px;
+}
+.person-img{
+    width: 350px;
+    margin-bottom: 10px;
+}
+.p-text{
+    width: 500px;
+    text-align: center;
+    margin: auto;
+    font-size: 20px;
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-weight: 300;
+}
+a:hover{
+    color: gray;
+}
+.links{
+    margin: auto;
+    margin-bottom: 20px;
+    width: auto;
+    height: auto;
+}
+.links a{
+    margin: auto;
+    padding: 70px;
+    font-size: 20px;
+}

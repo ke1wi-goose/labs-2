@@ -7,12 +7,12 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 
 
-@WebServlet("/rate")
-public class Hello extends HttpServlet {
+@WebServlet("/anzhela")
+public class Anzhela extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
 
-        String filepath = "/Users/ke1wi/Documents/JavaUnik/2-lab1-general-web/lab1/src/main/webapp/rate.html";
+        String filepath = "/Users/ke1wi/Documents/JavaUnik/2-lab1-general-web/lab1/src/main/webapp/html/anzhela.html";
         BufferedReader reader = new BufferedReader(new FileReader(filepath));
         PrintWriter out = response.getWriter();
 
