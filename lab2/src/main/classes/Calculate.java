@@ -15,12 +15,14 @@ public class Calculate extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
 
-        Integer number1 = Integer.parseInt(request.getParameter("number1"));
-        Integer number2 = Integer.parseInt(request.getParameter("number2"));
-        if (number1 == "" || number2 == "") {
+        String param1 = request.getParameter("number1");
+        String param2 = request.getParameter("number2");
+        if (param1 == "" || param2 == "") {
             response.sendRedirect("http://localhost:8080/lab2/empty");
             return;
         }
+        Integer number1 = Integer.parseInt(request.getParameter("number1"));
+        Integer number2 = Integer.parseInt(request.getParameter("number2"));
         String action = request.getParameter("select");
         int result;
         PrintWriter out = response.getWriter();

@@ -21,13 +21,15 @@ public class DivisionByZeroEx extends HttpServlet {
         out.print("<!DOCTYPE html>" +
                 "<html>" +
                 "<head>" +
-                "<meta http-equiv='refresh' content='5; URL=http://localhost:8080/lab2/index.html\'>" +
+                "<meta http-equiv='refresh' content='3; URL=http://localhost:8080/lab2/index.html\'>" +
                 "<title>Redirecting...</title>" +
                 "</head>" +
-                "<body style='background-color: red'>" +
+                "<body>" +
+                "<div style='background-color: red' width='500px' height='500px'>" +
                 "<h1 style='color: white'>Cannot division by zero</h1>" +
                 "<p style='color: white'>You will be redirected to the homepage in 3 seconds...</p>" +
-                "<p style='color: white'>If you are not redirected, <a href='http://localhost:8080/lab2/index.html'>click here</a>.</p>" +
+                "<p style='color: white'>If you are not redirected, <a href='http://localhost:8080/lab2/index.html'>click here</a>.</p>"+
+                "</div>" +
                 "</body>" +
                 "</html>");
 
