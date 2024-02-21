@@ -15,6 +15,7 @@ public class Vova extends HttpServlet {
         String filepath = "D:\\goose\\goose-kpi\\java2\\lab1\\src\\main\\webapp\\html\\vova.html";
         BufferedReader reader = new BufferedReader(new FileReader(filepath));
         PrintWriter out = response.getWriter();
+        response.addHeader("encoding", "UTF-8");
 
         String line;
         while ((line = reader.readLine()) != null) {
