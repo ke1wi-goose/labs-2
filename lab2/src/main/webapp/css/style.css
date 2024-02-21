@@ -49,3 +49,17 @@ body {
 .btn:hover {
     background-color: #45a049;
 }
+#dropdown{
+    width: 35px;
+    height: 35px;
+    transition: box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+    text-align: center;
+}
+#dropdown:hover{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+select option:hover{
+    background-color: #000;
+    color: #fff;
+}
