@@ -25,10 +25,10 @@ public class EmptyInput extends HttpServlet {
                 "<title>Redirecting...</title>" +
                 "</head>" +
                 "<body '>" +
-                "<div style='background-color: red' width='500px' height='500px'>" +
+                "<div style='text-align: center; background-color: red; box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); width:auto '>" +
                 "<h1 style='color: white'>Empty input</h1>" +
                 "<p style='color: white'>You will be redirected to the homepage in 3 seconds...</p>" +
-                "<p style='color: white'>If you are not redirected, <a href='https://localhost:8080/lab2'>click here</a>.</p>"+
+                "<p style='color: white'>If you are not redirected, <a href='http://localhost:8080/lab2/index.html'>click here</a>.</p>"+
                 "</div>" +
                 "</body>" +
                 "</html>");

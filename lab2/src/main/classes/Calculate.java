@@ -53,13 +53,13 @@ public class Calculate extends HttpServlet {
         out.print("<!DOCTYPE html>" +
                 "<html>" +
                 "<head>" +
-                "<meta http-equiv='refresh' content='5; URL=https://localhost:8080/lab2'>" +
+                "<meta http-equiv='refresh' content='3; URL=http://localhost:8080/lab2/index.html\'>" +
                 "<title>Redirecting...</title>" +
                 "</head>" +
                 "<body style='backgroud-color: white'>" +
                 "<h1 align='center' >Your result: " + result + "</h1>" +
                 "<p>You will be redirected to the homepage in 3 seconds...</p>" +
-                "<p>If you are not redirected, <a href='https://localhost:8080/lab2'>click here</a>.</p>" +
+                "<p>If you are not redirected, <a href='http://localhost:8080/lab2/index.html\'>click here</a>.</p>" +
                 "</body>" +
                 "</html>");
     }
