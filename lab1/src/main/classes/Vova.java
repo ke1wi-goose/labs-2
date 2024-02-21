@@ -12,7 +12,7 @@ public class Vova extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
 
-        String filepath = "/Users/ke1wi/Documents/JavaUnik/2-lab1-general-web/lab1/src/main/webapp/html/vova.html";
+        String filepath = "D:\\goose\\goose-kpi\\java2\\lab1\\src\\main\\webapp\\html\\vova.html";
         BufferedReader reader = new BufferedReader(new FileReader(filepath));
         PrintWriter out = response.getWriter();
 
