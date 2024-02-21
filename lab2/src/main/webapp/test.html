@@ -1,0 +1,37 @@
+<html>
+    <head><title>test</title></head>
+    <body>
+        <style>
+            .calculator {
+                display: flex;
+                align-items: center;
+            }
+
+            .calculator-input {
+                width: 100px;
+                padding: 8px;
+                margin-right: 8px;
+            }
+
+            .calculator-operator {
+                font-size: 18px;
+                margin-right: 8px;
+            }
+
+            .calculator-btn {
+                background-color: #4CAF50;
+                color: white;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+        </style>
+        <div class="calculator">
+            <input type="text" class="calculator-input" placeholder="Введіть число 1" id='number1'/> 
+            <span class="calculator-operator">+</span>
+            <input type="text" class="calculator-input" placeholder="Введіть число 2" id='number2'/> 
+            <button class="calculator-btn">Порахувати</button>
+        </div>            
+    </body>
+</html>
