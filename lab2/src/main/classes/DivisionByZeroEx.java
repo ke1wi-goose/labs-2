@@ -21,16 +21,13 @@ public class DivisionByZeroEx extends HttpServlet {
         out.print("<!DOCTYPE html>" +
                 "<html>" +
                 "<head>" +
+                "<meta http-equiv='refresh' content='5; URL=http://localhost:8080/lab2/index.html\'>" +
                 "<title>Redirecting...</title>" +
                 "</head>" +
-                "<form id='redirectForm' action='https://localhost:8080/lab2' method='GET'>" +
-                "<input type='submit' value='Click here if not redirected'>" +
-                "</form>" +
-                "<script>" +
-                "document.getElementById('redirectForm').submit();" +
-                "</script>" +
-                "<p style='color: white'>If you are not redirected, <a href='https://localhost:8080/lab2'>click here</a>.</p>"
-                +
+                "<body style='background-color: red'>" +
+                "<h1 style='color: white'>Cannot division by zero</h1>" +
+                "<p style='color: white'>You will be redirected to the homepage in 3 seconds...</p>" +
+                "<p style='color: white'>If you are not redirected, <a href='http://localhost:8080/lab2/index.html'>click here</a>.</p>" +
                 "</body>" +
                 "</html>");
 
