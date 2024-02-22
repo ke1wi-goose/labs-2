@@ -33,7 +33,7 @@ body {
 
 .form-field:hover {
 	border-color: #2b702d;
-	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 20px #2b702d;
 }
 
 .btn {
@@ -47,7 +47,7 @@ body {
 }
 
 .btn:hover {
-	background-color: #45a049;
+	background-color: #367b39;
 }
 #dropdown {
 	width: 35px;
@@ -56,6 +56,13 @@ body {
 	cursor: pointer;
 	text-align: center;
 }
-#dropdown:hover {
-	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+
+.link-a{
+	margin: 10px 10px 10px 10px;
+	text-decoration: none;
+	color: black;
+	transition: color 0.2s ease-in-out;
+}
+.link-a:hover{
+	color:#367b39
 }

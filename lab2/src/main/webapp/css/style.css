@@ -33,7 +33,7 @@ body {
 
 .form-field:hover {
 	border-color: #2b702d;
-	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 20px #2b702d;
 }
 
 .btn {
@@ -49,6 +49,7 @@ body {
 .btn:hover {
 	background-color: #45a049;
 }
+
 #dropdown {
 	width: 35px;
 	height: 35px;

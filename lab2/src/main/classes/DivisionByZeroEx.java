@@ -29,7 +29,7 @@ public class DivisionByZeroEx extends HttpServlet {
                 "<body style='text-align='center''>" +
                 "<div style='text-align: center; background-color: red; box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); width: 400px'>"
                 +
-                "<h1 style='color: white'>Cannot division by zero</h1>" +
+                "<h1 style='color: white'>Cannot divide by zero</h1>" +
                 "<p style='color: white'>You will be redirected to the homepage in 3 seconds...</p>" +
                 "<p style='color: white'>If you are not redirected, <a href='http://localhost:8080/lab2/html/home'>click here</a>.</p>"
                 +
