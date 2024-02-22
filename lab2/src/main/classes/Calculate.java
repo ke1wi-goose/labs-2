@@ -7,8 +7,7 @@ import jakarta.servlet.*;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.*;
 
-
-@WebServlet("/calculate")
+@WebServlet("/html/calculate")
 public class Calculate extends HttpServlet {
 
     @Override
@@ -21,10 +20,18 @@ public class Calculate extends HttpServlet {
             response.sendRedirect("http://localhost:8080/lab2/empty");
             return;
         }
-        Integer number1 = Integer.parseInt(request.getParameter("number1"));
-        Integer number2 = Integer.parseInt(request.getParameter("number2"));
+        Long number1 = Long.parseLong(request.getParameter("number1"));
+        Long number2 = Long.parseLong(request.getParameter("number2"));
         String action = request.getParameter("select");
-        int result;
+        Cookie[] cookies = {
+                new Cookie("num1", number1.toString()),
+                new Cookie("num2", number2.toString()),
+        };
+        for (Cookie cookie : cookies) {
+            cookie.setMaxAge(3600);
+            response.addCookie(cookie);
+        }
+        Long result;
         PrintWriter out = response.getWriter();
 
         switch (action) {
@@ -53,13 +60,12 @@ public class Calculate extends HttpServlet {
         out.print("<!DOCTYPE html>" +
                 "<html>" +
                 "<head>" +
-                "<meta http-equiv='refresh' content='3; URL=http://localhost:8080/lab2/index.html\'>" +
-                "<title>Redirecting...</title>" +
+                "<title>Result</title>" +
                 "</head>" +
-                "<body style='backgroud-color: white'>" +
+                "<body>" +
+                "<div style='backgroud-color: white; text-align: center'" +
                 "<h1 align='center' >Your result: " + result + "</h1>" +
-                "<p>You will be redirected to the homepage in 3 seconds...</p>" +
-                "<p>If you are not redirected, <a href='http://localhost:8080/lab2/index.html\'>click here</a>.</p>" +
+                "<a href='http://localhost:8080/lab2/html/home'>Redirect to homepage</a>" +
                 "</body>" +
                 "</html>");
     }
