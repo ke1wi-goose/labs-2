@@ -64,7 +64,7 @@ public class Calculate extends HttpServlet {
                 "</head>" +
                 "<body>" +
                 "<div style='backgroud-color: white; text-align: center'" +
-                "<h1 align='center' >Your result: <br>" + result + "</h1>" +
+                "<h1 align='center' >Your result: <br>" + result + "</h1><br>" +
                 "<a href='http://localhost:8080/lab2/html/home'>Redirect to homepage</a>" +
                 "</body>" +
                 "</html>");

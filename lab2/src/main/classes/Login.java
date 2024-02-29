@@ -41,6 +41,20 @@ public class Login extends HttpServlet {
                 return;
             }
         }
+        out.print("<!DOCTYPE html>" +
+        "<html>" +
+        "<head>" +
+        "<meta http-equiv='refresh' content='5; URL=http://localhost:8080/lab2/html/login.html'>" +
+        "<title>Redirecting...</title>" +
+        "</head>" +
+        "<body style='text-align='center''>" +
+        "<h1>Login error</h1> <br>" +
+        "<p>You will be redirected to the homepage in 5 seconds...</p>" +
+        "<p>If you are not redirected, <a href='http://localhost:8080/lab2/html/login.html'>click here</a>.</p>"
+        +
+        // "</div>" +
+        "</body>" +
+        "</html>");
     }
-    // What to do if not login?;
+    
 }

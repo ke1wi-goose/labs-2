@@ -20,6 +20,7 @@
 	</head>
 	<body>
 		<style></style>
+		<h1 align="center">Calculator</h1><br>
 		<form action="calculate" class="form-group" method="post">
 			<input
 				type="text"
