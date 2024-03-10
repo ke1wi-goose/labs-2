@@ -2,7 +2,8 @@
 <%
 	Cookie[] cookies = request.getCookies();
 	String num1 = "";
-	String num2 = ""; 
+	String num2 = "";
+	String num3 = "";
 
 	if (cookies != null) { 
 		for (Cookie cookie : cookies) { 
@@ -10,6 +11,8 @@
 				num1 = cookie.getValue(); 
 			} else if (cookie.getName().equals("num2")) { 
 				num2 = cookie.getValue(); 
+			} else if (cookie.getName().equals("num3")) { 
+				num3 = cookie.getValue(); 
 			} 
 		} 
 	}
