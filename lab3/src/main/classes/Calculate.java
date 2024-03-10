@@ -13,5 +13,8 @@ public class Calculate extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
+
+        request.setAttribute("result");
+            
     }
 }
