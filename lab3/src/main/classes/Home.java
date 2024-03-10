@@ -17,7 +17,6 @@ public class Home extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        request.setAttribute();
         RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/form.jsp");
         dispatcher.forward(request, response);
         return;
