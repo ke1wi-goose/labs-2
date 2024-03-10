@@ -16,7 +16,7 @@ cookies = request.getCookies(); String num1 = ""; String num2 = ""; String num3
     <h1>y=ax!</h1>
     <hr />
     <form class="form-group">
-      <p>
+      <section class="section-group">
         from:
         <input
           type="text"
@@ -43,8 +43,9 @@ cookies = request.getCookies(); String num1 = ""; String num2 = ""; String num3
           name="number3"
           value="<%= num3 %>"
         />
-      </p>
-      <p>
+      </section>
+      <div id="divider"></div>
+      <section class="section-group">
         from:
         <input
           type="text"
@@ -71,8 +72,8 @@ cookies = request.getCookies(); String num1 = ""; String num2 = ""; String num3
           name="number3"
           value="<%= num3 %>"
         />
-      </p>
-      <p>
+      </section>
+      <section class="section-group">
         from:
         <input
           type="text"
@@ -81,7 +82,7 @@ cookies = request.getCookies(); String num1 = ""; String num2 = ""; String num3
           name="number1"
           value="<%= num1 %>"
         />
-		<br />
+        <br />
         to:
         <input
           type="text"
@@ -89,7 +90,8 @@ cookies = request.getCookies(); String num1 = ""; String num2 = ""; String num3
           placeholder="Число 2"
           name="number2"
           value="<%= num2 %>"
-        />        <br />
+        />
+        <br />
         step:
         <input
           type="text"
@@ -98,8 +100,8 @@ cookies = request.getCookies(); String num1 = ""; String num2 = ""; String num3
           name="number3"
           value="<%= num3 %>"
         />
-      </p>
-      <p>
+      </section>
+      <section class="section-group">
         from:
         <input
           type="text"
@@ -107,7 +109,8 @@ cookies = request.getCookies(); String num1 = ""; String num2 = ""; String num3
           placeholder="Число 1"
           name="number1"
           value="<%= num1 %>"
-        />        <br />
+        />
+        <br />
         to:
         <input
           type="text"
@@ -115,7 +118,8 @@ cookies = request.getCookies(); String num1 = ""; String num2 = ""; String num3
           placeholder="Число 2"
           name="number2"
           value="<%= num2 %>"
-        />        <br />
+        />
+        <br />
         step:
         <input
           type="text"
@@ -124,7 +128,7 @@ cookies = request.getCookies(); String num1 = ""; String num2 = ""; String num3
           name="number3"
           value="<%= num3 %>"
         />
-      </p>
+      </section>
     </form>
     <hr />
     <% if
