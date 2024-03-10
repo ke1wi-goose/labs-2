@@ -15,121 +15,130 @@ cookies = request.getCookies(); String num1 = ""; String num2 = ""; String num3
 	<body>
 		<h1>y=ax!</h1>
 		<hr />
-		<form class="form-group">
-			<section class="section-group">
-				from:
-				<input
-					type="text"
-					class="form-field"
-					placeholder="Число 1"
-					name="number1"
-					value="<%= num1 %>"
-				/>
-				<br />
-				to:
-				<input
-					type="text"
-					class="form-field"
-					placeholder="Число 2"
-					name="number2"
-					value="<%= num2 %>"
-				/>
-				<br />
-				step:
-				<input
-					type="text"
-					class="form-field"
-					placeholder="Число 3"
-					name="number3"
-					value="<%= num3 %>"
-				/>
-			</section>
-			<div id="divider"></div>
-			<section class="section-group">
-				from:
-				<input
-					type="text"
-					class="form-field"
-					placeholder="Число 1"
-					name="number1"
-					value="<%= num1 %>"
-				/>
-				<br />
-				to:
-				<input
-					type="text"
-					class="form-field"
-					placeholder="Число 2"
-					name="number2"
-					value="<%= num2 %>"
-				/>
-				<br />
-				step:
-				<input
-					type="text"
-					class="form-field"
-					placeholder="Число 3"
-					name="number3"
-					value="<%= num3 %>"
-				/>
-			</section>
-			<section class="section-group">
-				from:
-				<input
-					type="text"
-					class="form-field"
-					placeholder="Число 1"
-					name="number1"
-					value="<%= num1 %>"
-				/>
-				<br />
-				to:
-				<input
-					type="text"
-					class="form-field"
-					placeholder="Число 2"
-					name="number2"
-					value="<%= num2 %>"
-				/>
-				<br />
-				step:
-				<input
-					type="text"
-					class="form-field"
-					placeholder="Число 3"
-					name="number3"
-					value="<%= num3 %>"
-				/>
-			</section>
-			<section class="section-group">
-				from:
-				<input
-					type="text"
-					class="form-field"
-					placeholder="Число 1"
-					name="number1"
-					value="<%= num1 %>"
-				/>
-				<br />
-				to:
-				<input
-					type="text"
-					class="form-field"
-					placeholder="Число 2"
-					name="number2"
-					value="<%= num2 %>"
-				/>
-				<br />
-				step:
-				<input
-					type="text"
-					class="form-field"
-					placeholder="Число 3"
-					name="number3"
-					value="<%= num3 %>"
-				/>
-			</section>
-		</form>
+		<div class="collaps">
+			<form class="form-group">
+				<section class="section-group">
+					<p>'a' parametr</p>
+					from:
+					<input
+						type="text"
+						class="form-field"
+						placeholder="Число 1"
+						name="number1"
+						value="<%= num1 %>"
+					/>
+					<br />
+					to:
+					<input
+						type="text"
+						class="form-field"
+						placeholder="Число 2"
+						name="number2"
+						value="<%= num2 %>"
+					/>
+					<br />
+					step:
+					<input
+						type="text"
+						class="form-field"
+						placeholder="Число 3"
+						name="number3"
+						value="<%= num3 %>"
+					/>
+				</section>
+				<div id="divider"></div>
+				<section class="section-group">
+					<p>'b' parametr</p>
+					from:
+					<input
+						type="text"
+						class="form-field"
+						placeholder="Число 1"
+						name="number1"
+						value="<%= num1 %>"
+					/>
+					<br />
+					to:
+					<input
+						type="text"
+						class="form-field"
+						placeholder="Число 2"
+						name="number2"
+						value="<%= num2 %>"
+					/>
+					<br />
+					step:
+					<input
+						type="text"
+						class="form-field"
+						placeholder="Число 3"
+						name="number3"
+						value="<%= num3 %>"
+					/>
+				</section>
+				<div id="divider"></div>
+				<section class="section-group">
+					<p>'c' parametr</p>
+					from:
+					<input
+						type="text"
+						class="form-field"
+						placeholder="Число 1"
+						name="number1"
+						value="<%= num1 %>"
+					/>
+					<br />
+					to:
+					<input
+						type="text"
+						class="form-field"
+						placeholder="Число 2"
+						name="number2"
+						value="<%= num2 %>"
+					/>
+					<br />
+					step:
+					<input
+						type="text"
+						class="form-field"
+						placeholder="Число 3"
+						name="number3"
+						value="<%= num3 %>"
+					/>
+				</section>
+				<div id="divider"></div>
+				<section class="section-group">
+					<p>'d' parametr</p>
+					from:
+					<input
+						type="text"
+						class="form-field"
+						placeholder="Число 1"
+						name="number1"
+						value="<%= num1 %>"
+					/>
+					<br />
+					to:
+					<input
+						type="text"
+						class="form-field"
+						placeholder="Число 2"
+						name="number2"
+						value="<%= num2 %>"
+					/>
+					<br />
+					step:
+					<input
+						type="text"
+						class="form-field"
+						placeholder="Число 3"
+						name="number3"
+						value="<%= num3 %>"
+					/>
+				</section>
+			</form>
+			<button class="btn">Calculate</button>
+		</div>
 		<hr />
 		<table border="1">
 			<tr>
