@@ -81,3 +81,7 @@ body {
 .btn {
   margin-top: 30px;
 }
+
+.transparent-text {
+  color: white;
+}
