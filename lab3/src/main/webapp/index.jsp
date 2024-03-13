@@ -16,7 +16,7 @@ cookies = request.getCookies(); String num1 = ""; String num2 = ""; String num3
 		<h1>y=ax!</h1>
 		<hr />
 		<div class="collaps">
-			<form class="form-group">
+			<form class="form-group" action="calculate" method="post">
 				<section class="section-group">
 					<p>'a' parametr</p>
 					from:

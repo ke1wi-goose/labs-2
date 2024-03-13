@@ -1,4 +1,10 @@
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Iterator;
+
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -16,77 +22,31 @@ public class Calculate extends HttpServlet {
         double[] step = new double[4];
 
         String[] params = { "a", "b", "c", "d" };
-        for (double i = 0; i < params.length; i++) {
+        for (int i = 0; i < params.length; i++) {
             from[i] = Double.parseDouble(request.getParameter("from_" + params[i]));
             to[i] = Double.parseDouble(request.getParameter("to_" + params[i]));
             step[i] = Double.parseDouble(request.getParameter("step_" + params[i]));
         }
 
-        double a, b, c, d, y;
-        switch (request.getParameter("sequence")) {
-            case "Vova":
-                while (a != to[0]) {
-                    while (b != to[1]) {
-                        while (c != to[2]) {
-                            while (d != to[3]) {
-                                y = ((5 * a) / (Math.sin(a))) + (Math.sqrt((Math.tanh(Math.abs(b) + c)) / Math.log(d)));
-                                d += step[3];
-                            }
-                            c += step[2];
-                        }
-                        b += step[1];
-                    }
-                    a += step[0];
-                }
-                break;
-            case "Sasha":
-                while (a != to[0]) {
-                    while (b != to[1]) {
-                        while (c != to[2]) {
-                            while (d != to[3]) {
-                                y = ((5 * a) / (Math.sin(a))) + (Math.sqrt((Math.tanh(Math.abs(b) + c)) / Math.log(d)));
-                                d += step[3];
-                            }
-                            c += step[2];
-                        }
-                        b += step[1];
-                    }
-                    a += step[0];
-                }
-                break;
-            case "Anzhela":
-                while (a != to[0]) {
-                    while (b != to[1]) {
-                        while (c != to[2]) {
-                            while (d != to[3]) {
-                                y = ((5 * a) / (Math.sin(a))) + (Math.sqrt((Math.tanh(Math.abs(b) + c)) / Math.log(d)));
-                                d += step[3];
-                            }
-                            c += step[2];
-                        }
-                        b += step[1];
-                    }
-                    a += step[0];
-                }
-                break;
-            case "Pasha":
-                while (a != to[0]) {
-                    while (b != to[1]) {
-                        while (c != to[2]) {
-                            while (d != to[3]) {
-                                y = ((5 * a) / (Math.sin(a))) + (Math.sqrt((Math.tanh(Math.abs(b) + c)) / Math.log(d)));
-                                d += step[3];
-                            }
-                            c += step[2];
-                        }
-                        b += step[1];
-                    }
-                    a += step[0];
-                }
-                break;
+        ArrayList<ArrayList<Double>> lists_of_vars = new ArrayList<ArrayList<Double>>();
 
-            default:
-                break;
+        double y = 0;
+        for (double a = from[0]; a <= to[0]; a += step[0]) {
+            for (double b = from[1]; b <= to[1]; b += step[1]) {
+                for (double c = from[2]; c <= to[2]; c += step[2]) {
+                    for (double d = from[3]; d <= to[3]; d += step[3]) {
+                        y = ((5 * a) / (Math.sin(a))) + (Math.sqrt((Math.tanh(Math.abs(b) + c)) / Math.log(d)));
+                        lists_of_vars.add(new ArrayList<Double>(Arrays.asList(y, a, b, c, d)));
+                    }
+                }
+            }
         }
+        int i = 1;
+        for (ArrayList list : lists_of_vars) {
+            request.setAttribute("Iteration " + i, list);
+            i++;
+        }
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/");
+        dispatcher.forward(request, response);
     }
 }
