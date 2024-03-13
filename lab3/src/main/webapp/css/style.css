@@ -20,11 +20,12 @@ body {
   border: 1px solid gray;
   border-radius: 4px;
   transition: border-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
   transition: box-shadow 0.3s ease-in-out;
 }
 
 .form-field:focus {
-  border-color: #4caf50;
+  border: 1px solid #2b702d;
 }
 
 .form-field:hover {
@@ -51,7 +52,7 @@ body {
   margin-right: 10px;
   margin-left: 10px;
   border-right: 1px solid black;
-  height: 210px;
+  height: 230px;
 }
 
 .form-group {
