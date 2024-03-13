@@ -15,16 +15,17 @@ body {
 	margin-bottom: 10px;
 }
 .form-field {
-	padding: 10px;
-	margin: 0 5px;
-	border: 1px solid gray;
-	border-radius: 4px;
-	transition: border-color 0.3s ease-in-out;
-	transition: box-shadow 0.3s ease-in-out;
+  padding: 10px;
+  margin: 0 5px;
+  border: 1px solid gray;
+  border-radius: 4px;
+  transition: border-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out;
 }
 
 .form-field:focus {
-	border-color: #4caf50;
+  border: 1px solid #2b702d;
 }
 
 .form-field:hover {
@@ -48,10 +49,10 @@ body {
 }
 
 #divider {
-	margin-right: 10px;
-	margin-left: 10px;
-	border-right: 1px solid black;
-	height: 210px;
+  margin-right: 10px;
+  margin-left: 10px;
+  border-right: 1px solid black;
+  height: 230px;
 }
 
 .form-group {
@@ -80,4 +81,8 @@ body {
 
 .btn {
 	margin-top: 30px;
+}
+
+.transparent-text {
+  color: white;
 }

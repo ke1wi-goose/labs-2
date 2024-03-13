@@ -15,25 +15,25 @@ cookies = request.getCookies(); String num1 = ""; String num2 = ""; String num3
 	<body>
 		<h1>y=ax!</h1>
 		<hr />
-		<div class="collaps">
-			<form class="form-group" action="calculate" method="post">
+		<form class="form-group" action="calculate" method="post">
+			<section class="section-container">
 				<section class="section-group">
-					<p>'a' parametr</p>
+					<p>'a' parameter</p>
 					from:
 					<input
 						type="text"
 						class="form-field"
 						placeholder="Число 1"
-						name="number1"
+						name="from_a"
 						value="<%= num1 %>"
 					/>
 					<br />
-					to:
+					to: <label class="transparent-text">...</label>
 					<input
 						type="text"
 						class="form-field"
 						placeholder="Число 2"
-						name="number2"
+						name="to_a"
 						value="<%= num2 %>"
 					/>
 					<br />
@@ -42,28 +42,28 @@ cookies = request.getCookies(); String num1 = ""; String num2 = ""; String num3
 						type="text"
 						class="form-field"
 						placeholder="Число 3"
-						name="number3"
+						name="step_a"
 						value="<%= num3 %>"
 					/>
 				</section>
 				<div id="divider"></div>
 				<section class="section-group">
-					<p>'b' parametr</p>
+					<p>'b' parameter</p>
 					from:
 					<input
 						type="text"
 						class="form-field"
 						placeholder="Число 1"
-						name="number1"
+						name="from_b"
 						value="<%= num1 %>"
 					/>
 					<br />
-					to:
+					to: <label class="transparent-text">...</label>
 					<input
 						type="text"
 						class="form-field"
 						placeholder="Число 2"
-						name="number2"
+						name="to_b"
 						value="<%= num2 %>"
 					/>
 					<br />
@@ -72,28 +72,28 @@ cookies = request.getCookies(); String num1 = ""; String num2 = ""; String num3
 						type="text"
 						class="form-field"
 						placeholder="Число 3"
-						name="number3"
+						name="step_b"
 						value="<%= num3 %>"
 					/>
 				</section>
 				<div id="divider"></div>
 				<section class="section-group">
-					<p>'c' parametr</p>
+					<p>'c' parameter</p>
 					from:
 					<input
 						type="text"
 						class="form-field"
 						placeholder="Число 1"
-						name="number1"
+						name="from_c"
 						value="<%= num1 %>"
 					/>
 					<br />
-					to:
+					to: <label class="transparent-text">...</label>
 					<input
 						type="text"
 						class="form-field"
 						placeholder="Число 2"
-						name="number2"
+						name="to_c"
 						value="<%= num2 %>"
 					/>
 					<br />
@@ -102,28 +102,28 @@ cookies = request.getCookies(); String num1 = ""; String num2 = ""; String num3
 						type="text"
 						class="form-field"
 						placeholder="Число 3"
-						name="number3"
+						name="step_c"
 						value="<%= num3 %>"
 					/>
 				</section>
 				<div id="divider"></div>
 				<section class="section-group">
-					<p>'d' parametr</p>
+					<p>'d' parameter</p>
 					from:
 					<input
 						type="text"
 						class="form-field"
 						placeholder="Число 1"
-						name="number1"
+						name="from_d"
 						value="<%= num1 %>"
 					/>
 					<br />
-					to:
+					to: <label class="transparent-text">...</label>
 					<input
 						type="text"
 						class="form-field"
 						placeholder="Число 2"
-						name="number2"
+						name="to_d"
 						value="<%= num2 %>"
 					/>
 					<br />
@@ -132,13 +132,14 @@ cookies = request.getCookies(); String num1 = ""; String num2 = ""; String num3
 						type="text"
 						class="form-field"
 						placeholder="Число 3"
-						name="number3"
+						name="step_d"
 						value="<%= num3 %>"
 					/>
 				</section>
-			</form>
+			</section>
+
 			<button class="btn">Calculate</button>
-		</div>
+		</form>
 		<hr />
 		<table border="1">
 			<tr>
