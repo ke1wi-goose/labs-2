@@ -77,8 +77,8 @@ public class Result {
         }
         return playedWithActor;
     }
-    private static boolean hasActorWithNoFilms(Database database) {
 
+    private static boolean hasActorWithNoFilms(Database database) {
 
         ArrayList<Actor> actors = database.getListOfActors();
         ArrayList<Film> films = database.getListOfFilms();
@@ -103,4 +103,3 @@ public class Result {
         return false;
     }
 }
-
