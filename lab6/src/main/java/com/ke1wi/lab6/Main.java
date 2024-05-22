@@ -33,6 +33,8 @@ public class Main {
             System.out.println(
                     "Threads: " + numThreads + ", Sum: " + sum + ", Time: " + (endTime - startTime) + "ms");
         }
+
+        System.out.println("Graphic");
     }
 
     public static long sum_by_formula(int n, long N) {
