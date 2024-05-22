@@ -8,7 +8,7 @@ class Main {
                 new Phone("Звичайний телефон", 20),
                 new Smartphone("Смартфон", 100, "Android"),
                 new Landline("Стаціонарний телефон", 5, true),
-                null // Додаємо null для тестування
+                null
         };
 
         Comparator<Phone> nameComparator = Comparator.comparing(phone -> phone != null ? phone.getName() : "");
@@ -70,7 +70,7 @@ class Main {
 
 class Phone {
     public String name;
-    public Integer batteryLife; // Використовуємо Integer замість int для роботи з null
+    public Integer batteryLife;
 
     public Phone(String name, Integer batteryLife) {
         this.name = name;
