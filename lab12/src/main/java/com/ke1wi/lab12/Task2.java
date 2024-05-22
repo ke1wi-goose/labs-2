@@ -41,6 +41,10 @@ class Institute {
         this.faculties = faculties;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public List<Faculty> getFaculties() {
         return faculties;
     }
@@ -53,6 +57,10 @@ class Faculty {
     public Faculty(String name, List<Student> students) {
         this.name = name;
         this.students = students;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public List<Student> getStudents() {
@@ -79,5 +87,9 @@ class Student {
 
     public String getFullName() {
         return firstName + " " + lastName;
+    }
+
+    public String getStudentId() {
+        return studentId;
     }
 }
