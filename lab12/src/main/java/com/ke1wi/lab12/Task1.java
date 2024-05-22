@@ -4,12 +4,12 @@ import java.util.stream.Collectors;
 public class Task1 {
     public static void main(String[] args) {
         List<Applicant> applicants = Arrays.asList(
-                new Applicant("Ivanov", 80),
-                new Applicant("Petrov", 70),
-                new Applicant("Sidorov", 85),
-                new Applicant("Nikolaev", 55),
-                new Applicant("Alexeev", 60),
-                new Applicant("Vasiliev", 95));
+                new Applicant("Maliarevych", 80),
+                new Applicant("Vovchok", 70),
+                new Applicant("Nychyk", 85),
+                new Applicant("Perehuda", 55),
+                new Applicant("Martuniuk", 60),
+                new Applicant("Klimchuk", 95));
 
         int budgetPlaces = 2;
         int contractPlaces = 3;

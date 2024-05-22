@@ -4,12 +4,12 @@ import java.util.stream.Collectors;
 public class Task2 {
     public static void main(String[] args) {
         List<Student> students1 = Arrays.asList(
-                new Student("John", "Doe", "123", 4.5),
-                new Student("Jane", "Smith", "124", 3.8));
+                new Student("Volodymyr", "Klimchuk", "123", 4.5),
+                new Student("Pavlo", "Perehuda", "124", 3.8));
 
         List<Student> students2 = Arrays.asList(
-                new Student("Bob", "Brown", "125", 4.0),
-                new Student("Alice", "Johnson", "126", 4.2));
+                new Student("Oleksandr", "Nychyk", "125", 4.0),
+                new Student("Anzhela", "Maliarevych", "126", 4.2));
 
         Faculty faculty1 = new Faculty("Computer Science", students1);
         Faculty faculty2 = new Faculty("Mathematics", students2);
