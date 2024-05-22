@@ -1,7 +1,35 @@
-package src.src;
-
 import java.util.Arrays;
 import java.util.List;
+
+public class Main {
+    public static void main(String[] args) {
+        // Завдання з л/р №2
+        double a = 0.345d;
+        double b = -2.25d;
+        double c = 2.65d;
+        double d = 3.99d;
+
+        CustomFunction function = (x, y, z, w) -> (5 * x) / Math.sin(x)
+                + Math.sqrt((Math.tanh(Math.abs(y) * z) / Math.log(w)));
+        executeFunction(function, a, b, c, d);
+
+        // Завдання з л/р №8
+        List<Employee> employees = Arrays.asList(
+                new Employee("Bob"),
+                new Employee("Bob", 28),
+                new Employee("Alice", 30, "0987654321"),
+                new Manager("Alex", 36, "0873168955", 1000, 5));
+
+        employees.forEach(employee -> System.out.println(employee));
+
+    }
+
+    public static void executeFunction(CustomFunction function, double a, double b, double c, double d) {
+        double result = function.apply(a, b, c, d);
+        System.out.println("Параметри: a = " + a + ", b = " + b + ", c = " + c + ", d = " + d);
+        System.out.println("Результат обчислення функції: y = " + result);
+    }
+}
 
 @FunctionalInterface
 interface CustomFunction {
@@ -105,34 +133,5 @@ class Manager extends Employee {
                 this.getPhone() != null ? this.getPhone() : "Not available",
                 this.getSalary() != 0 ? this.getSalary() : "Not available",
                 this.getSubordinates() != 0 ? this.getSubordinates() : "Not available");
-    }
-}
-
-public class Main {
-    public static void main(String[] args) {
-        // Завдання з л/р №2
-        double a = 0.345d;
-        double b = -2.25d;
-        double c = 2.65d;
-        double d = 3.99d;
-
-        CustomFunction function = (x, y, z, w) -> (5 * x) / Math.sin(x) + Math.sqrt((Math.tanh(Math.abs(y) * z) / Math.log(w)));
-        executeFunction(function, a, b, c, d);
-
-        // Завдання з л/р №8
-        List<Employee> employees = Arrays.asList(
-                new Employee("Bob"),
-                new Employee("Bob", 28),
-                new Employee("Alice", 30, "0987654321"),
-                new Manager("Alex", 36, "0873168955", 1000, 5)
-        );
-
-        employees.forEach(System.out::println);
-    }
-
-    public static void executeFunction(CustomFunction function, double a, double b, double c, double d) {
-        double result = function.apply(a, b, c, d);
-        System.out.println("Параметри: a = " + a + ", b = " + b + ", c = " + c + ", d = " + d);
-        System.out.println("Результат обчислення функції: y = " + result);
     }
 }

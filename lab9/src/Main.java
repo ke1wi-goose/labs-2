@@ -2,9 +2,9 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.TreeSet;
 
-class Main {
+public class Main {
     public static void main(String[] args) {
-        Phone[] phones = new Phone[]{
+        Phone[] phones = new Phone[] {
                 new Phone("Звичайний телефон", 20),
                 new Smartphone("Смартфон", 100, "Android"),
                 new Landline("Стаціонарний телефон", 5, true),
@@ -29,7 +29,8 @@ class Main {
             }
         }
 
-        Comparator<Phone> batteryAndNameComparator = Comparator.comparingInt((Phone phone) -> phone != null ? phone.getBatteryLife() : 0)
+        Comparator<Phone> batteryAndNameComparator = Comparator
+                .comparingInt((Phone phone) -> phone != null ? phone.getBatteryLife() : 0)
                 .thenComparing((Phone phone) -> phone != null ? phone.getName() : "");
         Arrays.sort(phones, batteryAndNameComparator);
         System.out.println("\nСортування за тривалістю роботи батареї, а у разі співпадіння - за назвою:");
@@ -39,7 +40,8 @@ class Main {
             }
         }
 
-        Comparator<Phone> batteryLifeComparatorWithNulls = Comparator.nullsLast(Comparator.comparingInt(Phone::getBatteryLife));
+        Comparator<Phone> batteryLifeComparatorWithNulls = Comparator
+                .nullsLast(Comparator.comparingInt(Phone::getBatteryLife));
         Arrays.sort(phones, batteryLifeComparatorWithNulls);
         System.out.println("\nСортування з урахуванням null-посилань за тривалістю роботи батареї:");
         for (Phone phone : phones) {
@@ -105,12 +107,14 @@ class Smartphone extends Phone {
 
     @Override
     public void call() {
-        System.out.println("Смартфон з ОС " + operatingSystem + " дзвонить з тривалістю батареї " + batteryLife + " годин");
+        System.out.println(
+                "Смартфон з ОС " + operatingSystem + " дзвонить з тривалістю батареї " + batteryLife + " годин");
     }
 
     @Override
     public String toString() {
-        return "Смартфон: " + name + ", ОС: " + operatingSystem + ", тривалість роботи батареї: " + batteryLife + " годин";
+        return "Смартфон: " + name + ", ОС: " + operatingSystem + ", тривалість роботи батареї: " + batteryLife
+                + " годин";
     }
 }
 
@@ -124,11 +128,13 @@ class Landline extends Phone {
 
     @Override
     public void call() {
-        System.out.println("Стаціонарний телефон з автовідповідачем: " + (hasAnsweringMachine ? "так" : "ні") + ", тривалість роботи батареї: " + batteryLife + " годин");
+        System.out.println("Стаціонарний телефон з автовідповідачем: " + (hasAnsweringMachine ? "так" : "ні")
+                + ", тривалість роботи батареї: " + batteryLife + " годин");
     }
 
     @Override
     public String toString() {
-        return "Стаціонарний телефон: " + name + ", автовідповідач: " + (hasAnsweringMachine ? "так" : "ні") + ", тривалість роботи батареї: " + batteryLife + " годин";
+        return "Стаціонарний телефон: " + name + ", автовідповідач: " + (hasAnsweringMachine ? "так" : "ні")
+                + ", тривалість роботи батареї: " + batteryLife + " годин";
     }
 }

@@ -64,6 +64,7 @@ public class MovieController extends HttpServlet {
         List<Movie> movies = dataBase.getMovies();
         List<Actor> actors = dataBase.getActors();
         request.setAttribute("movies", movies);
+        request.setAttribute("vova", 10);
         request.setAttribute("actors", actors);
         RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
         dispatcher.forward(request, response);

@@ -4,6 +4,7 @@ import Employees.Manager;
 import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.function.ToIntFunction;
+
 import java.util.function.BiFunction;
 
 public class Result {
